@@ -60,7 +60,7 @@ body {
 }
 
 .header-wrapper .nav-list {
-    width: 65rem;
+    width: 75rem;
     display: flex;
     justify-content: space-around;
     list-style: none;
@@ -126,7 +126,7 @@ body {
 }
 
 .hero {
-    background: url('assets/img/hero-background.jpg');
+    background: url('assets/img/imagenes/banner2.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
