@@ -59,6 +59,10 @@ body {
     margin-left: 2rem;
 }
 
+.header-wrapper .logo img{
+    height: 60px;
+}
+
 .header-wrapper .nav-list {
     width: 75rem;
     display: flex;
@@ -151,7 +155,7 @@ body {
 }
 
 .sing-up .sign-up_text {
-    color: var(--regula-color-text);
+    color: var(--main-color);
     font-size: 3rem;
     text-align: center;
 }
