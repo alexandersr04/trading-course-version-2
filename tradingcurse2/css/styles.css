@@ -1,0 +1,521 @@
+:root {
+    --main-color: #FFF9F9;
+    --main-color-text: #BAABDA;
+    --regula-color-text: #363333;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;;
+}
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 1.6rem;
+}
+
+.centered {
+    margin: 0 auto;
+}
+
+.btn {
+    color: var(--main-color);
+    background-color: black;
+    font-size: 1.8rem;
+    transition: background-color 0.2s ease-in;
+    text-decoration: none;
+    padding: 1rem 0.8rem;
+}
+
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#header {
+    width: 100%;
+}
+
+.header-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    font-size: 1.8rem;
+    background-color: var(--main-color);
+    color: var(--regula-color-text);
+    box-shadow: 0rem 0.3rem 0.3rem rgba(186,171,218, .3);
+    position: fixed;
+    top: 0;
+}
+
+.header-wrapper .logo {
+    margin-left: 2rem;
+}
+
+.header-wrapper .logo img{
+    height: 60px;
+}
+
+.header-wrapper .nav-list {
+    width: 75rem;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+.nav-list li {
+    margin-left: 1.5rem;
+}
+
+.nav-list li a {
+    padding: 0.5rem;
+    color: inherit;
+    position: relative;
+}
+
+.nav-list li a::after {
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: 0;
+    left:0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--main-color-text);
+    transform-origin: center bottom;
+    -webkit-transform-origin: center bottom;
+    -moz-transform-origin: center bottom; 
+    -ms-transform-origin: center bottom; 
+    -o-transform-origin: center bottom;
+    transform: scaleX(0);
+    transition: transform 0.3s linear;
+    -webkit-transition: transform 0.3s linear;
+    -moz-transition: transform 0.3s linear;
+    -o-transition: transform 0.3s linear;
+}
+
+.nav-list li a:hover::after{
+    transform: scaleX(1);
+    transform-origin: center bottom;
+    -webkit-transform-origin: center bottom;
+    -moz-transform-origin: center bottom; 
+    -ms-transform-origin: center bottom; 
+    -o-transform-origin: center bottom;
+    transition: transform 0.3s linear;
+    -webkit-transition: transform 0.3s linear;
+    -moz-transition: transform 0.3s linear;
+    -o-transition: transform 0.3s linear;
+}
+
+.header-wrapper #cart {
+    margin-right: 2rem;
+} 
+
+/*************** Main ***************/
+/*************** HERO-SECTION ***************/
+#main {
+    margin-top: 60px;
+    width: 100%;
+}
+
+.hero {
+    background: url('../assets/img/imagenes/banner2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: calc(100vh - 6rem);
+    color: var(--main-color-text);
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+}
+
+/****Sign Up Form****/
+.sing-up {
+    width: 100%;
+    min-width: 80%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 1rem 0;
+}
+
+.sing-up .sign-up_text {
+    color: var(--main-color);
+    font-size: 3rem;
+    text-align: center;
+}
+
+.sing-up .sign-up_form {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sign-up_form #email {
+    width: 50%;
+    padding: 1em;
+    border: rgba(0,0,0,.12);
+    font-size: 1.8rem;
+}
+
+.sign-up_form #email:focus {
+    outline: none;
+}
+
+.sign-up_form .sing-up_link {
+    text-align: center;
+    font-size: 2.8rem;
+    width: 21.6rem;
+    padding: 1rem 0.8rem;
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+/*************** BEST SELLER ***************/
+
+.best-sellers {
+    padding-top: 8rem;
+    margin-bottom: 8rem;
+    max-width: 1540px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.best-sellers_header {
+    padding: 0 0.84rem;
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: 'Arial', monospace;
+    margin-bottom: 2rem;
+}
+
+.best-sellers_cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    width: 32.5rem;
+    height: 42rem;
+    padding: 0 0.84rem;
+    margin-bottom: 4rem;
+}
+
+.card img {
+    width: 100%;
+    height: 42rem;
+}
+
+.card .card_text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card_text .card_btn {
+    color: var(--main-color);
+    padding: 1rem 0.4rem
+}
+
+/*************** Articles ***************/
+
+.read {
+    padding: 4rem 0rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-color);
+}
+
+.read-title{
+    font-size: 4.5rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.read_cards {
+    display: flex;
+    align-items:baseline;
+    justify-content: space-between;
+    max-width: 1340px;
+}
+
+.article {
+    width: 90%;
+    height: 60rem;
+}
+
+.card_content {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+    padding: 0 0.84rem;
+}
+
+.card_content img{
+    width: 100%;
+    height: 35rem;
+}
+
+.card_content span {
+    padding: 0.5rem
+}
+
+.card_description {
+    width: 100%;
+    font-size: 1.5rem;
+    height: 14rem;
+    min-height: 14rem;
+    text-align: justify;
+}
+
+.read-card_bth {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+/*************** End of Main ***************/
+
+
+/***************** Footer *****************/
+#footer {
+    width: 100%;
+    background-color: #000;
+}
+
+.footer-wrapper {
+    width: 90%;
+    height: 20rem;
+    color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.footer-rights, .footer-social {
+    width: 25%;
+    height: 18vh;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-rights .title, .footer-social .title{
+    font-size: 1.5rem;
+}
+
+.footer-social {
+   text-align: center;
+}
+
+.social-card_links li{
+    list-style: none;
+}
+
+.social-card_links li i {
+    font-size: 2rem;
+    margin: 0.5rem;
+    align-items: baseline;
+}
+
+.footer-social a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.social-card_link {
+    display: block;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+}
+
+/************************** Media Queries /**************************
+ *************** Media Query for Navigation on 350px ***************/
+@media only screen and (max-width:21.875rem) {
+    .nav-list {
+        margin-left: 1rem;
+        position: fixed;
+        inset: 0 0 0 30%;
+        background: rgba(181, 143, 193, 0.9);
+        flex-direction: column;
+        padding: min(20vh, 10rem) 2rem;
+        right: 0;
+        color: #363333;
+    }
+}
+
+/*************** TODO: Media Query for ***************
+
+ *************** BEST SELLER ***************
+****************1360px width display********/
+@media only screen and (max-width:85rem) {
+    
+    .best-sellers {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        width: 27rem;
+        height: 37rem;
+    }
+
+    .card img{
+        width: 24.5rem;
+        height: 35rem;
+    }
+
+    .card .card_text {
+        width: 24.5rem;
+    }
+
+    .card_text, .card_btn {
+        font-size: 1.5rem;
+    }
+}
+
+/*1200px max - width display*/
+@media only screen and (max-width:75rem) {
+
+/*************** Nav ***************/
+    .header-wrapper .nav-list {
+        width: 45rem;
+    }
+
+/*************** BEST SELLER ***************/
+    .best-sellers_cards {
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(31.5rem, 1fr));
+        align-items: center;
+        justify-items: center;
+    }
+
+    .card {
+        width: 32.5rem;
+        height: 42rem;
+        padding: 0 0.84rem;
+        margin-bottom: 4rem;
+    }
+
+    .card img, .card .card_text {
+        width: 100%;
+    }
+
+    /**************** Articles ****************/
+    .article {
+        width: 80%;
+        height: 55rem;
+    }
+
+    .card_content img{
+        height: 26rem;
+    }
+    
+    .card_content span {
+        padding: 0.5rem
+    }
+    
+    .card_description {
+        height: 14.3rem;
+        overflow-y: hidden;
+    }
+    
+    .read-card_bth {
+        margin-top: 0.5rem;
+    }
+}
+
+/*850px max - width display*/
+@media only screen and (max-width:53.125rem) {
+
+    /*************** Nav HERE ***************/
+
+
+    /*************** Sign up Form ***************/
+    .sing-up .sign-up_text {
+        font-size: 2.5rem;
+    }
+
+    .sign-up_form #email, .sing-up .sing-up_link {
+        font-size: 1.6rem;
+    }
+
+    .sing-up .sing-up_link {
+        width: 16.1rem;
+        padding: 1.385rem;
+    }
+
+    /*************** BEST SELLER ***************/
+    .best-sellers_cards {
+        width: 95%;
+        grid-template-columns: repeat(2, minmax(28.5rem, 1fr));
+    }
+
+    .card {
+        width: 28.5rem;
+        padding: 0 0.84rem;
+        margin-bottom: 0rem;
+    }
+
+    .card img, .card .card_text {
+        width: 100%;
+    }
+}
+
+/*670px max - width display*/
+@media only screen and (max-width:41.875rem) {
+
+
+    /*************** Sign up Form ***************/
+
+    .sing-up .sign-up_text {
+        font-size: 1.6rem;
+    }
+
+    .sign-up_form #email, .sing-up .sing-up_link {
+        width: 30%;
+        font-size: 1.6rem;
+    }
+
+    .sing-up .sing-up_link {
+        width: 16.1rem;
+        padding: 1.385rem;
+    }
+}
+
+/*670px - width display and lowers*/
+@media only screen and (max-width:39.0625rem) {
+
+    .nav-list {
+        display: none !important;
+    }
+
+    .hero {
+    }
+
+}
+
