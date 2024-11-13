@@ -130,7 +130,7 @@ body {
 }
 
 .hero {
-    background: url('../assets/img/imagenes/banner2.png');
+    background: url('/imagenes/banner2.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
