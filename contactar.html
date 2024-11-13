@@ -6,16 +6,15 @@
         <title>Iniciar Sesión - Zandoli Invest Srl</title>
         <script src="https://kit.fontawesome.com/87428b1341.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/tailwind.min.css">
-        <link rel="stylesheet" href="css/main_styles.css" />
-        
-        <link rel="stylesheet" href="css/contactar.css" />
+        <link rel="stylesheet" href="css/main_styles.css"/>
+        <link rel="stylesheet" href="css/contactar.css"/>
     </head>
     <body>
         <header id="header">
             <div class="header-wrapper">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="assets/img/imagenes/logo.png" alt="logo">
+                        <img src="imagenes/logo.png" alt="logo">
                     </a>
                 </div>
                 <nav>
@@ -37,46 +36,30 @@
                     <i class="fa-solid fa-cart-shopping"></i>
                 </div>
         </header>
-        <main id="main">
-            <div class="frm_contactar">
-                <form id="send-mail" class="py-5 px-5 max-w-lg mx-auto">
-                    <div class="mb-10">
-                        <label for="email">To:</label>
-                        <input class="bg-gray-100 border shadow p-3 w-full"  id="email" type="email">
+        <main>
+            <seticon class="contact">
+                <h2 class="group__title">Contactanos</h2>
+                <div class="container container--flex">
+                    <div class="contact-information column column--50">
+                        <h3 class="column__title">Informacion de contacto</h3>
+                        <p class="column__txt">Estamos a su disposición. Envíanos un correo con tus preguntas, sugerencias, propuestas, opiniones, ... Te responderemos a la mayor brevedad posible.</p>
+                        <p class="column__txt"><span class="icon-phone"></span>Telefóno: 809-555-5555</p>
+                        <p class="column__txt"><span class="icon-map"></span>Dirección: Calle Penetración No. 0000, Santo Domingo Este</p>
+                        <p class="column__txt"><span class="icon-mail"></span>Email: pilares.dela.equidad@gmail.com</p>
                     </div>
-                    <div class="mb-10">
-                        <label for="asunto">Subject:</label>
-                        <input class="bg-gray-100 border shadow p-3 w-full"  id="subject" type="text">
-                    </div>
-                    <div class="mb-10"> 
-                        <label for="mensaje">Message:</label>
-                        <textarea class="bg-gray-100 border shadow p-3 w-full" id="message"></textarea>
-                    </div>
-        
-                    <div  id="spinner">
-                        <div class="sk-chase">
-                            <div class="sk-chase-dot"></div>
-                            <div class="sk-chase-dot"></div>
-                            <div class="sk-chase-dot"></div>
-                            <div class="sk-chase-dot"></div>
-                            <div class="sk-chase-dot"></div>
-                            <div class="sk-chase-dot"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="flex justify-between">
-                        <button id="send" class="w-full bg-blue-600 px-2 py-5 text-white items-center mr-5 uppercase font-bold items-center flex justify-center" type="submit">
-                            Send
-                            <!-- <i class="material-icons right text-white ml-3">send</i> -->
-                        </button>
-        
-                        <button id="resetBtn" class="w-full bg-green-600 px-2 py-5 text-white items-center uppercase font-bold items-center flex justify-center" type="button">
-                            Reset
-                            <!-- <i class="material-icons right ml-3">delete</i> -->
-                        </button>
-                    </div>
-                </form> 
-            </div>
+                    <form action="enviar-correo.php" method="post" class="formulario column column--50" onsubmit="return validar();" >
+                        <label class="formulario__label">Nombre:</label>
+                        <input type="text" id="nombre" class="formulario__input-txt" name="nombre" required>
+                        <label class="formulario__label">Telefono:</label>
+                        <input type="text" id="telefono" class="formulario__input-txt" name="telefono" required>
+                        <label class="formulario__label">Correo:</label>
+                        <input type="email" id="correo" class="formulario__input-txt" name="correo" required>
+                        <label class="formulario__label">Mensaje:</label>
+                        <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="formulario__textarea" required></textarea>
+                        <input type="submit" class="btn formulario__btn" value="Enviar">
+                    </form>
+                </div>
+            </seticon>
         </main>
         <footer id="footer">
             <div class="footer-wrapper centered">
