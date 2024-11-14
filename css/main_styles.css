@@ -118,6 +118,20 @@ body {
     -o-transition: transform 0.3s linear;
 }
 
+.nav-list .btnlogin-popup {
+    width: 130px;
+    height: 50px;
+    background-color: var(--transparent);
+    border: 2px solid #ffffff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: var(#ffffff);
+    font-weight: 500;
+    margin-left: 40px;
+}  
+  
 .header-wrapper #cart {
     margin-right: 2rem;
 } 
