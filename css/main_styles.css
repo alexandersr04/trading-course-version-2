@@ -63,6 +63,12 @@ body {
     height: 60px;
 }
 
+#menu_icon{
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+}
+
 .header-wrapper .nav-list {
     width: 75rem;
     display: flex;
@@ -425,8 +431,16 @@ body {
 @media only screen and (max-width:75rem) {
 
 /*************** Nav ***************/
+    #menu_icon{
+        display: none;
+    }
+
     .header-wrapper .nav-list {
-        width: 45rem;
+        /* width: 46rem; */
+    }
+
+    .nav_trading {
+        display: none;
     }
 
 /*************** BEST SELLER ***************/
@@ -473,10 +487,39 @@ body {
     }
 }
 
+/*1080px max - width display*/
+@media only screen and (max-width:1080px){
+    #menu_icon{
+        display: block;
+        visibility: visible;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        line-height: 40px;
+        border: 2px solid #bde1f8;    
+    }
+
+    #menu_icon .menu {
+       font-size: 3rem;
+       color: #000;
+    }
+
+
+    nav {
+       display: none;
+    }
+
+}
+
 /*850px max - width display*/
 @media only screen and (max-width:53.125rem) {
 
     /*************** Nav HERE ***************/
+    .header-wrapper .nav-list {
+        
+    }
 
 
     /*************** Sign up Form ***************/
