@@ -118,23 +118,32 @@ body {
     -o-transition: transform 0.3s linear;
 }
 
-.id.btnlogin-popup {
-    width: 130px;
-    height: 50px;
+#cart{
+    padding: 5px;
+}
+
+.cart_login{
+    display: flex; 
+    align-items: center;
+}
+  
+.header-wrapper #cart {
+    margin-right: 0.5rem;
+} 
+
+.loginBtn {
+    width: 100px;
+    height: 40px;
     background-color: var(--transparent);
-    border: 2px solid #ffffff;
+    border: 2px solid #bde1f8;
     outline: none;
     border-radius: 6px;
     cursor: pointer;
     font-size: 1.1em;
     color: var(#ffffff);
     font-weight: 500;
-    margin-left: 40px;
+    margin:  0px 10px;
 }  
-  
-.header-wrapper #cart {
-    margin-right: 2rem;
-} 
 
 /*************** Main ***************/
 /*************** HERO-SECTION ***************/

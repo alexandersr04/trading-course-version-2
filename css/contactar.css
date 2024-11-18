@@ -1,5 +1,33 @@
 main {
-  margin: 235px auto;
+  margin: 80px auto;
+}
+
+.column {
+  width: 100%;
+}
+
+ .group__title {
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  font-weight: 100;
+  font-size: 1.3em;
+  margin: 30px;
+}
+
+ .container {
+  margin: 100px auto;
+  background: #e6e6e6;
+  border: 2px solid #bde1f8;
+  padding: 10px;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.container--flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .contact-information {
@@ -68,7 +96,7 @@ main {
   }
 
   .contact-information {
-      border-right: 1px solid #5F9535;
+      /* border-right: 1px solid #5F9535; */
       border-bottom: none;
   }
 }
